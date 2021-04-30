@@ -21,19 +21,19 @@ RMDIR /S /Q "%TARGET%"
 
 Xcopy /E /I "%BATCH%" "%TARGET%"
 
-start "" /b/d"%folder%" Scripts\activate.bat
+call %folder%\Scripts\activate.bat
 call CD /D "%TARGET%"
-call conda env create --file datavis.yaml --prefix="%TARGET%\gprenv"
+call conda env create --file datavis.yaml --prefix=%TARGET%\gprenv
 echo CD /D "%TARGET%" >> "%TARGET%\dzt_visualizer.bat"
-echo start "" /b/d"%folder%" Scripts\activate.bat >> "%TARGET%\dzt_visualizer.bat"
-echo call conda activate "%TARGET%\gprenv" >> "%TARGET%\dzt_visualizer.bat"
-echo call "%TARGET%\gprenv\python.exe" "%TARGET%\dzt_visualizer.py" >> "%TARGET%\dzt_visualizer.bat"
-echo CreateObject("Wscript.Shell").Run """%TARGET%\dzt_visualizer.bat""", 0, True > "%TARGET%\run.vbs"
+echo start "" /b/d"%folder%" Scripts\activate.bat >> %TARGET%\dzt_visualizer.bat
+echo call conda activate "%TARGET%\gprenv" >> %TARGET%\dzt_visualizer.bat
+echo call "%TARGET%\gprenv\python.exe" "%TARGET%\dzt_visualizer.py" >> %TARGET%\dzt_visualizer.bat
+echo CreateObject("Wscript.Shell").Run "%TARGET%\dzt_visualizer.bat", 0, True > %TARGET%\run.vbs
 %PWS% -Command "$ws = New-Object -ComObject WScript.Shell; $S = $ws.CreateShortcut('%SHORTCUT%'); $S.TargetPath = '%TARGET%\run.vbs'; $S.IconLocation = '%TARGET%\favicon.ico'; $S.Save()"
-echo set TARGET=%homedrive%%homepath%\gpr_data_vis >> "%TARGET%\Reinstall_Shortcut.bat"
-echo set SHORTCUT=%PUBLIC%\Desktop\GPR_Data_Vis.lnk >> "%TARGET%\Reinstall_Shortcut.bat"
-echo set PWS=powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile >> "%TARGET%\Reinstall_Shortcut.bat"
-echo %PWS% -Command "$ws = New-Object -ComObject WScript.Shell; $S = $ws.CreateShortcut('%SHORTCUT%'); $S.TargetPath = '%TARGET%\run.vbs'; $S.IconLocation = '%TARGET%\favicon.ico'; $S.Save()" >> "%TARGET%\Reinstall_Shortcut.bat"
+echo set TARGET=%homedrive%%homepath%\gpr_data_vis >> %TARGET%\Reinstall_Shortcut.bat
+echo set SHORTCUT=%PUBLIC%\Desktop\GPR_Data_Vis.lnk >> %TARGET%\Reinstall_Shortcut.bat
+echo set PWS=powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile >> %TARGET%\Reinstall_Shortcut.bat
+echo %PWS% -Command "$ws = New-Object -ComObject WScript.Shell; $S = $ws.CreateShortcut('%SHORTCUT%'); $S.TargetPath = "%TARGET%\run.vbs"; $S.IconLocation = "%TARGET%\favicon.ico"; $S.Save()" >> %TARGET%\Reinstall_Shortcut.bat
 RMDIR /S /Q "%TARGET%\readgssi"
 RMDIR /S /Q "%TARGET%\.git"
 RMDIR /S /Q "%TARGET%\__pycache__"
