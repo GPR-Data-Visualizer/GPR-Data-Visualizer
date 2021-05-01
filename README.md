@@ -38,7 +38,7 @@ Extract to any location on your system.
 
 Run [Private Installer](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/Private_Install_GPR_Visualizer.bat) as administrator. Assuming user possesses default homedrive and homepath system variables, GPR Data Visualizer's installation location will be:
 ```bash
-C:\Users\Username\gpr_data_vis
+C:\Users\%Username%\gpr_data_vis
 ```
 
 ## Usage
