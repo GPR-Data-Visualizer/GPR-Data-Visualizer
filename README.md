@@ -3,6 +3,8 @@
 GPR Data Visualizer is a Python-based research software for reading DZT format binary files through a simple graphical user interface (GUI).
 GPR Data Visualizer is capabable of reading multiple DZT format binary files, apply various pre-defined filters to converted data, plotting read data to screen as human-readable plots using [matplotlib](https://matplotlib.org/), and exporting read data into human-readable formats.
 
+GPR Data Visualizer is inspired by GitHub user [iannesbitt](https://github.com/iannesbitt) and adapts portions of his free-software project [readgssi](https://github.com/iannesbitt/readgssi).
+
 ##Installation
 
 ### Installation for Systems with Multi-User Anaconda3 Installations on Windows ###
