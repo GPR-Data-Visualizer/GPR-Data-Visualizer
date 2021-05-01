@@ -24,7 +24,7 @@ Xcopy /E /I "%BATCH%" "%TARGET%"
 call %folder%\Scripts\activate.bat
 call CD /D "%TARGET%"
 call conda env create --file datavis.yaml --prefix=%TARGET%\gprenv
-echo CD /D "%TARGET%" >> "%TARGET%\dzt_visualizer.bat"
+echo CD /D "%TARGET%" >> %TARGET%\dzt_visualizer.bat
 echo start "" /b/d"%folder%" Scripts\activate.bat >> %TARGET%\dzt_visualizer.bat
 echo call conda activate "%TARGET%\gprenv" >> %TARGET%\dzt_visualizer.bat
 echo call "%TARGET%\gprenv\python.exe" "%TARGET%\dzt_visualizer.py" >> %TARGET%\dzt_visualizer.bat
