@@ -7,7 +7,7 @@ GPR Data Visualizer is capabable of reading multiple DZT format binary files, ap
 
 ### Installation for Systems with Multi-User Anaconda3 Installations on Windows ###
 
-Instructions for installing Anacond3 for Multiple Users can be found here [Multiple User Anaconda Installation](https://docs.anaconda.com/anaconda/install/multi-user/) or in the [Documentation](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/DOCS/GPR%20Documentation.pdf)
+Instructions for installing Anacond3 for Multiple Users can be found here [Multiple User Anaconda Installation](https://docs.anaconda.com/anaconda/install/multi-user/) or in the [Documentation](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/DOCS)
 
 Installations of Anaconda3 of this type must use the default installation path:
 ```bash
