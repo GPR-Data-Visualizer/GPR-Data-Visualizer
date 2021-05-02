@@ -1,15 +1,13 @@
 # GPR Data Visualizer
 
-GPR Data Visualizer is a Python-based research software for reading DZT format binary files through a simple graphical user interface (GUI).
-GPR Data Visualizer is capabable of reading multiple DZT format binary files, apply various pre-defined filters to converted data, plotting read data to screen as human-readable plots using [matplotlib](https://matplotlib.org/), and exporting read data into human-readable formats.
-
-GPR Data Visualizer is inspired by GitHub user [iannesbitt](https://github.com/iannesbitt) and adapts portions of his free-software project [readgssi](https://github.com/iannesbitt/readgssi).
+The GPR Data Visualizer is a Python-based research software for reading DZT format binary files through a simple graphical user interface (GUI).
+The software is capabable of reading multiple DZT format binary files, applying various pre-defined filters to converted data, plotting the resulting data as human-readable plots using [matplotlib](https://matplotlib.org/), and exporting resulting data into human-readable formats.
 
 ##Installation
 
 ### Installation for Systems with Multi-User Anaconda3 Installations on Windows ###
 
-Instructions for installing Anacond3 for Multiple Users can be found here [Multiple User Anaconda Installation](https://docs.anaconda.com/anaconda/install/multi-user/) or in the [Documentation](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/DOCS)
+Instructions for installing Anacond3 for Multiple Users can be found here [Multiple User Anaconda Installation](https://docs.anaconda.com/anaconda/install/multi-user/) Find refernce info to Anaconda in the [Documentation](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/DOCS/GPR%20Documentation.pdf)
 
 Installations of Anaconda3 of this type must use the default installation path:
 ```bash
@@ -38,12 +36,13 @@ Extract to any location on your system.
 
 Run [Private Installer](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/Private_Install_GPR_Visualizer.bat) as administrator. Assuming user possesses default homedrive and homepath system variables, GPR Data Visualizer's installation location will be:
 ```bash
-C:\Users\%Username%\gpr_data_vis
+C:\Users\Username\gpr_data_vis
 ```
 
 ## Usage
 
 The installation process will generate the Desktop Shortcut GPR_Data_Vis which can be double-clicked to run the program.
+For further usage instructions, see the documetation: [Documentation](https://github.com/GPR-Data-Visualizer/GPR-Data-Visualizer/blob/main/DOCS/GPR%20Documentation.pdf).
 
 ## License
 [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
